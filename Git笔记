@@ -1,0 +1,63 @@
+Git 版本控制工具（代码管理工具）
+
+下载网址：http://git-scm.com/
+git配置：1.Git连接远程的GitHub账号
+Git(github\gitlab)
+
+
+版本控制工具(代码管理工具) ：开源、免费
+版本控制工具(SVN)
+
+下载的官网：https://git-scm.com/
+一路next到底   
+
+全局--局部
+
+团队配合：
+	任务分解---做各自的任务---合作--->完成
+
+GIT 配置：
+	配置：1. git 连接远程 github 的账号
+	2. github 账号：github.com
+	3. 授权本台电脑可用 github 账号
+		ssh-keygen -t rsa -C "github注册的邮箱"
+	4. 配置本台电脑可使用的用户名及邮箱
+		git config --global user.name "github的用户名"
+
+		// 查看是否是自己的用户名
+		git config user.name
+
+		git config --global user.email "github的邮箱"
+
+		// 查看是否是自己的邮箱
+		git config user.email
+
+		// 远程授权验证
+		ssh -T git@github.com
+
+		Hi 你的用户名! You've successfully authenticated.....  
+		配置完成
+
+		3-4项为：只要换电脑工作，首次使用git 
+		都需要执行
+
+
+代码推送：
+仓库(本地)-->仓库(远程)
+本地带有.git的隐藏的文件夹
+文佳佳做为本地仓库（上传的文件）
+1.初始化仓库
+git init
+echo '123'>>1.txt
+//git 暂存区 缓存区
+git status // 查看当前git 状态
+// 红色文件代表 未被追踪的文件
+// 绿色文件代表 被追踪
+// git add <files>
+git add 1.txt // 指定添加的文件
+git commit -m "注释" //提交到缓存区并注释
+ git remote add origin git@github.com:rpf326421/222.git   //添加远程仓库地址
+  git push -u origin master  //推送
+
+
+
